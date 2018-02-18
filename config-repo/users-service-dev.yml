@@ -1,0 +1,39 @@
+server:
+  #context-path: /users-service
+  port: 9090  
+
+spring:
+  jpa:
+    database: "MYSQL"
+    hibernate:
+      naming:
+        physical-strategy: 
+          org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+    show-sql: "true"
+
+  database:
+    driverClassName: "org.mysql.Driver"
+
+  datasource:
+    platform: "mysql"
+    url: "jdbc:mysql://users-mysql:3306/bactrian_users"
+    username: "dbuser"
+    password: "password1234"
+    testWhileIdle: "true"
+    validationQuery: "SELECT 1"
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://bactrian-eureka:8761/eureka/
+    
+
+
+
+
+

@@ -1,0 +1,18 @@
+server:
+  port: 5555
+
+#Setting logging levels
+logging:
+    level:
+      com.netflix: WARN
+      org.springframework.web: WARN
+      com.dub: DEBUG
+
+
+endpoints:
+  routes:
+    sensitive: false
+    enabled: true
+
+      
+ 

@@ -1,0 +1,54 @@
+server:
+  port: 8080
+  #context-path: /customers-service
+
+
+spring:
+  jpa:
+    database: "MYSQL"
+   
+    show-sql: "true"
+   
+  database:
+    driverClassName: "org.mysql.Driver"
+
+  datasource:
+    platform:  "mysql"
+    url: "jdbc:mysql://customers-mysql:3306/bactrian_customers"
+    username: "dbuser"
+    password: "password1234"
+    testWhileIdle: "true"
+    validationQuery: "SELECT 1"
+
+#resourceUriPath: 
+#  customers-service/api/customer
+
+resourceUriHost:
+  customers-service
+
+resourceUriPath: 
+  api/customers/customer
+
+#resourceUriPort:
+#  8080
+
+resourceUriPort:
+  5555
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://bactrian-eureka:8761/eureka/
+    
+
+
+
+
+
+

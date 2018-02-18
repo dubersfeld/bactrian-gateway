@@ -1,0 +1,14 @@
+endpoints:
+  env:
+    sensitive: false
+    enabled: true
+    
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://bactrian-eureka:8761/eureka/
+    

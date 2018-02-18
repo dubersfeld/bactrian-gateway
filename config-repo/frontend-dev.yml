@@ -1,0 +1,43 @@
+
+
+resourceUriBase: 
+  http://localhost:5555/customers
+
+customerListUriPath:
+  /customerList
+
+customerCreateUriPath:
+  /createCustomer
+
+customerUpdateUriPath:
+  /customer/{customerId}
+
+customerDeleteUriPath:
+  /customer/{customerId}
+
+customerUriPath:
+  /customer/{customerId}
+
+
+userUriPath:
+  /user/{username}
+
+
+#userUriPath:
+#  /users-service/api/user/{username}
+
+
+
+server:
+  context-path: /bactrian
+  port: 8090
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://bactrian-eureka:8761/eureka/
+
+

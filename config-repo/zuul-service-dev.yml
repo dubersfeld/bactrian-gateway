@@ -1,0 +1,27 @@
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  debug:
+    request: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2500
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://bactrian-eureka:8761/eureka/
+
+zuul:
+  ignored-services: 'customers-service'
+  prefix: /api  
+  routes:
+    customers-service: /customers/**
